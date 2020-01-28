@@ -30,7 +30,7 @@ class RayCollision {
 
         return this;
 
-    } //reset
+    }
 
     inline function copy_from(other:RayCollision) {
 
@@ -39,7 +39,7 @@ class RayCollision {
         start = other.start;
         end = other.end;
 
-    } //copy_from
+    }
 
     inline function clone() {
 
@@ -49,9 +49,9 @@ class RayCollision {
 
         return _clone;
 
-    } //copy_from
+    }
 
-} //RayCollision
+}
 
 
 /** A static extension class helper for RayCollision */
@@ -89,4 +89,4 @@ class RayCollisionHelper {
         return data.ray.start.y + (data.ray.dir.y * data.end);
     }
 
-} //RayCollisionHelper
+}

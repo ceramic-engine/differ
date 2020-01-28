@@ -31,7 +31,7 @@ class SAT2D {
                 closestY = verts[i].y;
             }
 
-        } //for
+        }
 
         var normalAxisX = closestX - circleX;
         var normalAxisY = closestY - circleY;
@@ -121,7 +121,7 @@ class SAT2D {
                 closest = Math.abs(distMin);
             }
 
-        } //for
+        }
 
         //if you made it here, there is a collision!!!!!
 
@@ -137,7 +137,7 @@ class SAT2D {
 
         return into;
 
-    } //testCircleVsPolygon
+    }
 
         /** Internal api - test a circle against a circle */
     public static function testCircleVsCircle( circleA:Circle, circleB:Circle, ?into:ShapeCollision, flip:Bool = false ) : ShapeCollision {
@@ -182,7 +182,7 @@ class SAT2D {
 
         return null;
 
-    } //testCircleVsCircle
+    }
 
         /** Internal api - test a polygon against another polygon */
     static var tmp1:ShapeCollision = new ShapeCollision();
@@ -220,7 +220,7 @@ class SAT2D {
 
         return into;
 
-    } //testPolygonVsPolygon
+    }
 
         /** Internal api - test a ray against a circle */
     public static function testRayVsCircle( ray:Ray, circle:Circle, ?into:RayCollision ) : RayCollision {
@@ -265,7 +265,7 @@ class SAT2D {
 
         return null;
 
-    } //testRayVsCircle
+    }
 
         /** Internal api - test a ray against a polygon */
     public static function testRayVsPolygon( ray:Ray, polygon:Polygon, ?into:RayCollision ) : RayCollision {
@@ -324,7 +324,7 @@ class SAT2D {
 
         return null;
 
-    } //testRayVsPolygon
+    }
 
         /** Internal api - test a ray against another ray */
     public static function testRayVsRay( ray1:Ray, ray2:Ray, ?into:RayIntersection ) : RayIntersection {
@@ -370,7 +370,7 @@ class SAT2D {
 
         return null;
 
-    } //testRayVsRay
+    }
 
 //Internal implementation detail helpers
 
@@ -446,7 +446,7 @@ class SAT2D {
 
         return into;
 
-    } //checkPolygons
+    }
 
 
 //Internal helpers
@@ -454,7 +454,7 @@ class SAT2D {
         /** Internal helper for ray overlaps */
     static inline function rayU(udelta:Float, aX:Float, aY:Float, bX:Float, bY:Float, dX:Float, dY:Float) : Float {
         return (dX * (aY - bY) - dY * (aX - bX)) / udelta;
-    } //rayU
+    }
 
     static inline function findNormalAxisX(verts:Array<Vector>, index:Int) : Float {
         var v2 = (index >= verts.length - 1) ? verts[0] : verts[index + 1];
@@ -466,4 +466,4 @@ class SAT2D {
         return (v2.x - verts[index].x);
     }
 
-} //SAT2D
+}

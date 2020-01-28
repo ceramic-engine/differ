@@ -19,7 +19,7 @@ $(document).ready(function() {
                 $('#omnibar').hide();
                 $('#omnibar_text').tooltipster('hide');
             }
-        } //close_omnibar
+        }
 
         var focus_omnibar = function(e) {
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
             $('#omnibar_text').focus();
             $('#omnibar_text').tooltipster('show');
 
-        } //focus_omnibar
+        }
 
             //on any keypress, show if hidden, or focus if showing
         $('body').on('keypress', focus_omnibar);

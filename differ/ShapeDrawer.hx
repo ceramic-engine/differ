@@ -12,12 +12,12 @@ class ShapeDrawer {
 
     public function new() {
 
-    } //new
+    }
 
         /** Draw a line between p0 and p1. Implement this function at minimum in custom drawing handlers */
     public function drawLine( p0x:Float, p0y:Float, p1x:Float, p1y:Float, ?startPoint:Bool = true ) {
 
-    } //drawLine
+    }
 
         /** Draw a `Shape`, it will determine the type and draw it for you. */
     public function drawShape( shape:Shape ) {
@@ -28,14 +28,14 @@ class ShapeDrawer {
             drawCircle(cast shape);
         }
 
-    } //drawShape
+    }
 
         /** Draw a `Polygon` */
     public function drawPolygon( poly:Polygon ) {
 
         drawVertList(poly.transformedVertices);
 
-    } //drawPolygon
+    }
 
         /** Draw a circle `Shape` */
     public function drawCircle( circle:Circle ) {
@@ -72,12 +72,12 @@ class ShapeDrawer {
                 x *= radial_factor;
                 y *= radial_factor;
 
-        } //for
+        }
 
             //now draw it
         drawVertList( _verts );
 
-    } //drawCircle
+    }
 
     public function drawPoint( x:Float, y:Float, size:Float = 4 ) {
 
@@ -94,7 +94,7 @@ class ShapeDrawer {
 
         drawLine(xs, ys, xe, ye);
 
-    } //drawPoint
+    }
 
     public function drawShapeCollision( c:ShapeCollision, ?length:Float = 30 ) {
 
@@ -116,7 +116,7 @@ class ShapeDrawer {
             drawPoint(c.shape1.position.x + c.otherSeparationX, c.shape1.position.y + c.otherSeparationY);
         }
 
-    } //drawShapeCollision
+    }
 
 
 //Internal API
@@ -147,7 +147,7 @@ class ShapeDrawer {
             //join last point to first point
         drawLine(_verts[_count-1].x, _verts[_count-1].y, _verts[0].x, _verts[0].y, false);
 
-    } //drawVertList
+    }
 
 
-} //ShapeDrawer
+}

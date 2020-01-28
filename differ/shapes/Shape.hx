@@ -59,7 +59,7 @@ class Shape {
         _transformMatrix = new Matrix();
         _transformMatrix.makeTranslation( _position.x, _position.y );
 
-    } //new
+    }
 
 //Implemented in subclasses
 
@@ -79,7 +79,7 @@ class Shape {
         _scale = null;
         _transformMatrix = null;
 
-    } //destroy
+    }
 
 //Getters/Setters
 
@@ -140,7 +140,7 @@ class Shape {
 
         return _rotation = v;
 
-    } //set_rotation
+    }
 
 //.scaleX
 

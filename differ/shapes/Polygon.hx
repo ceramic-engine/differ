@@ -27,35 +27,35 @@ class Polygon extends Shape {
         _transformedVertices = new Array<Vector>();
         _vertices = vertices;
 
-    } //new
+    }
 
         /** Test for a collision with a shape. */
     override public function test( shape:Shape, ?into:ShapeCollision ) : ShapeCollision {
 
         return shape.testPolygon(this, into, true);
 
-    } //test
+    }
 
         /** Test for a collision with a circle. */
     override public function testCircle( circle:Circle, ?into:ShapeCollision, flip:Bool = false ) : ShapeCollision {
 
         return SAT2D.testCircleVsPolygon( circle, this, into, !flip );
 
-    } //testCircle
+    }
 
         /** Test for a collision with a polygon. */
     override public function testPolygon( polygon:Polygon, ?into:ShapeCollision, flip:Bool = false ) : ShapeCollision {
 
         return SAT2D.testPolygonVsPolygon( this, polygon, into, flip );
 
-    } //testPolygon
+    }
 
         /** Test for a collision with a ray. */
     override public function testRay( ray:Ray, ?into:RayCollision ) : RayCollision {
 
         return SAT2D.testRayVsPolygon(ray, this, into);
 
-    } //testRay
+    }
 
         /** Destroy this polygon and clean up. */
     override public function destroy() : Void {
@@ -71,7 +71,7 @@ class Polygon extends Shape {
 
         super.destroy();
 
-    } //destroy
+    }
 
 //Public static API
 
@@ -98,7 +98,7 @@ class Polygon extends Shape {
 
         return new Polygon(x,y,vertices);
 
-    } //create
+    }
 
         /** Helper generate a rectangle at x,y with a given width/height and centered state.
             Centered by default. Returns a ready made `Polygon` collision `Shape` */
@@ -124,7 +124,7 @@ class Polygon extends Shape {
 
         return new Polygon(x,y,vertices);
 
-    } //rectangle
+    }
 
         /** Helper generate a square at x,y with a given width/height with given centered state.
             Centered by default. Returns a ready made `Polygon` collision `Shape` */
@@ -132,7 +132,7 @@ class Polygon extends Shape {
 
         return rectangle(x, y, width, width, centered);
 
-    } //square
+    }
 
         /** Helper generate a triangle at x,y with a given radius.
             Returns a ready made `Polygon` collision `Shape` */
@@ -140,7 +140,7 @@ class Polygon extends Shape {
 
         return create(x, y, 3, radius);
 
-    } //triangle
+    }
 
 //Internal
 
@@ -164,4 +164,4 @@ class Polygon extends Shape {
         return _vertices;
     }
 
-} //Polygon
+}

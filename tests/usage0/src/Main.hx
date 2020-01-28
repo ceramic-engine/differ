@@ -31,7 +31,7 @@ class Main extends luxe.Game {
 
         return config;
 
-    } //config
+    }
 
     override function ready() {
 
@@ -66,7 +66,7 @@ class Main extends luxe.Game {
         count = Lambda.count( state._states );
         state.set( 'state$current' );
 
-    } //ready
+    }
 
     public static function display(text:String) {
         disp.text = text;
@@ -97,7 +97,7 @@ class Main extends luxe.Game {
             Luxe.shutdown();
         }
 
-    } //onkeyup
+    }
 
     inline static var big_number : Int = 0xFFFFFF;
 
@@ -137,4 +137,4 @@ class Main extends luxe.Game {
         }
     }
 
-} //Main
+}

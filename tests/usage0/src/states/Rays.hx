@@ -179,6 +179,6 @@ class Rays extends luxe.States.State {
             }
         }
 
-    } //update
+    }
 
 }

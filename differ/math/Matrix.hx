@@ -29,7 +29,7 @@ class Matrix  {
         this.tx = tx;
         this.ty = ty;
 
-    } //new
+    }
 
     public function identity() {
 
@@ -40,14 +40,14 @@ class Matrix  {
         tx = 0;
         ty = 0;
 
-    } //identity
+    }
 
     public function translate (x:Float, y:Float):Void {
 
         tx += x;
         ty += y;
 
-    } //translate
+    }
 
     public function compose( _position:Vector, _rotation:Float, _scale:Vector ) {
 
@@ -57,7 +57,7 @@ class Matrix  {
         rotate( _rotation );
         makeTranslation( _position.x, _position.y );
 
-    } //compose
+    }
 
     public function makeTranslation( _x:Float, _y:Float ) : Matrix {
 
@@ -66,7 +66,7 @@ class Matrix  {
 
         return this;
 
-    } //makeTranslation
+    }
 
     public function rotate (angle:Float):Void {
 
@@ -85,7 +85,7 @@ class Matrix  {
             ty = tx * sin + ty * cos;
             tx = tx1;
 
-    } //rotate
+    }
 
     public function scale (x:Float, y:Float):Void {
 
@@ -98,12 +98,12 @@ class Matrix  {
         tx *= x;
         ty *= y;
 
-    } //scale
+    }
 
     public function toString ():String {
 
         return "(a=" + a + ", b=" + b + ", c=" + c + ", d=" + d + ", tx=" + tx + ", ty=" + ty + ")";
 
-    } //toString
+    }
 
-} //Matrix
+}

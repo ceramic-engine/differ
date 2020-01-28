@@ -30,7 +30,7 @@ class RayIntersection {
 
         return this;
 
-    } //reset
+    }
 
     inline function copy_from(other:RayIntersection) {
 
@@ -39,7 +39,7 @@ class RayIntersection {
         u1 = other.u1;
         u2 = other.u2;
 
-    } //copy_from
+    }
 
     inline function clone() {
 
@@ -49,5 +49,5 @@ class RayIntersection {
 
         return _clone;
 
-    } //copy_from
+    }
 } //RayIntersection

@@ -36,7 +36,7 @@ var get_github_latest_release = function(options) {
             options.done(err, res);
         }
 
-    } //_fetch_done
+    }
 
     if(!options.user || !options.repo) {
         return;
@@ -46,7 +46,7 @@ var get_github_latest_release = function(options) {
      .done(_fetch_done)
      .fail(_fetch_done);
 
-} //get_latest_release_version
+}
 
 $(document).ready(function() {
 

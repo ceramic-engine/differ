@@ -45,7 +45,7 @@ class ShapeCollision {
         
         return this;
 
-    } //reset
+    }
 
     inline function clone() {
 
@@ -55,7 +55,7 @@ class ShapeCollision {
 
         return _clone;
 
-    } //clone
+    }
 
     inline function copy_from(_other:ShapeCollision) {
 
@@ -72,6 +72,6 @@ class ShapeCollision {
         shape1 = _other.shape1;
         shape2 = _other.shape2;
 
-    } //copy_from
+    }
 
 } //ShapeCollision

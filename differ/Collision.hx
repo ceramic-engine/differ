@@ -14,7 +14,7 @@ class Collision {
 
         return shape1.test(shape2, into);
 
-    } //test
+    }
 
         /** Test a single shape against multiple other shapes.
             When no collision is found, this function returns empty results, this function will never return null.
@@ -41,7 +41,7 @@ class Collision {
 
         return results;
 
-    } //testShapes
+    }
 
         /** Test a line between two points against a list of shapes.
             When no collision is found, this function returns null.
@@ -50,7 +50,7 @@ class Collision {
 
         return shape.testRay(ray, into);
 
-    } //rayShape
+    }
 
         /** Test a ray between two points against a list of shapes.
             When no collision is found, this function returns an empty array, this function will never return null.
@@ -75,7 +75,7 @@ class Collision {
 
         return results;
 
-    } //rayShapes
+    }
 
         /** Test a ray against another ray.
             When no collision is found, this function returns null.
@@ -84,7 +84,7 @@ class Collision {
 
         return SAT2D.testRayVsRay(ray1, ray2, into);
 
-    } //rayRay
+    }
 
         /** Test a ray against a list of other rays.
             When no collision is found, this function returns an empty array, this function will never return null.
@@ -109,7 +109,7 @@ class Collision {
 
         return results;
 
-    } //rayRays
+    }
 
         /** Test if a given point lands inside the given polygon.
             Returns true if it does, false otherwise. */
@@ -143,10 +143,10 @@ class Collision {
 
         return oddNodes;
 
-    } //pointInPoly
+    }
 
 
-} //Collision
+}
 
 
 //Internal helpers
@@ -191,7 +191,7 @@ class Results<T:Constructible> {
         
         count++;
 
-    } //push
+    }
 
         /** Get the item at the given index. 
             If the index is < 0 and > length-1 it returns null; */
@@ -201,7 +201,7 @@ class Results<T:Constructible> {
 
         return items[index];
 
-    } //get
+    }
 
         /** Grabs the last item from the cache to reuse.
             If there are no free items, it adds a new one.
@@ -213,7 +213,7 @@ class Results<T:Constructible> {
             //return the last item
         return items[count];
 
-    } //pull
+    }
 
         /** Clear the container, which sets the length to 0. 
             This keeps the cached items but won't return them 
@@ -234,7 +234,7 @@ class Results<T:Constructible> {
     inline function get_length() : Int return count;
     inline function get_total() : Int return items.length;
 
-} //Results
+}
 
 @:generic
 #if (haxe_ver >= 3.3)

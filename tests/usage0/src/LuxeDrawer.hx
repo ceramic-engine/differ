@@ -33,6 +33,6 @@ class LuxeDrawer extends ShapeDrawer {
             immediate : true
         });
 
-    } //drawLine
+    }
 
 } //LuxeDrawer

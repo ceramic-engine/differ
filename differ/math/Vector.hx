@@ -27,14 +27,14 @@ class Vector {
         x = _x;
         y = _y;
 
-    } //new
+    }
 
         /** Copy, returns a new vector instance from this vector. */
     public inline function clone() : Vector {
 
         return new Vector(x, y);
 
-    } //clone
+    }
 
         /** Transforms Vector based on the given Matrix. Returns this vector, modified. */
     public function transform(matrix:Matrix):Vector {
@@ -46,7 +46,7 @@ class Vector {
 
         return v;
 
-    } //transform
+    }
 
         /** Sets the vector's length to 1. Returns this vector, modified. */
     public function normalize() : Vector {
@@ -63,7 +63,7 @@ class Vector {
 
         return this;
 
-    } //normalize
+    }
 
         /** Sets the length to fit under the given maximum value.
             Nothing is done if the vector is already shorter.
@@ -74,7 +74,7 @@ class Vector {
 
         return this;
 
-    } //truncate
+    }
 
         /** Invert this vector. Returns this vector, modified. */
     public function invert() : Vector {
@@ -84,21 +84,21 @@ class Vector {
 
         return this;
 
-    } //invert
+    }
 
         /** Return the dot product of this vector and another vector. */
     public function dot( other:Vector ) : Float {
 
         return x * other.x + y * other.y;
 
-    } //dot
+    }
 
         /** Return the cross product of this vector and another vector. */
     public function cross( other:Vector ) : Float {
 
         return x * other.y - y * other.x;
 
-    } //cross
+    }
 
         /** Add a vector to this vector. Returns this vector, modified. */
     public function add(other:Vector):Vector {
@@ -108,7 +108,7 @@ class Vector {
 
         return this;
 
-    } //add
+    }
 
         /** Subtract a vector from this one. Returns this vector, modified. */
     public function subtract( other:Vector ) : Vector {
@@ -118,7 +118,7 @@ class Vector {
 
         return this;
 
-    } //subtract
+    }
 
         /** Return a string representation of this vector. */
     public function toString() : String return "Vector x:" + x + ", y:" + y;
@@ -139,10 +139,10 @@ class Vector {
 
         return value;
 
-    } //set_length
+    }
 
     inline function get_length() : Float return Math.sqrt(lengthsq);
     inline function get_lengthsq() : Float return x * x + y * y;
 
 
-} //Vector
+}
